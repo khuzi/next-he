@@ -2,7 +2,7 @@ import React from "react";
 
 import { contactData, contactInfo } from "../Data/index";
 
-import { Typography, Grid, TextField, Hidden } from "@material-ui/core";
+import { Typography, Grid, Hidden, Divider } from "@material-ui/core";
 
 import classes from "../styles/contact.module.css";
 
@@ -57,6 +57,54 @@ const Contact = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                height: "50px",
+                display: "grid",
+                placeItems: "center",
+              }}
+            >
+              <div className={classes.divider_hori}></div>
+            </div>
+            <div className={classes.socialLinks}>
+              <ul>
+                <li>
+                  <i className="fab fa-facebook"></i>
+                </li>
+                <li>
+                  <i className="fab fa-whatsapp"></i>
+                </li>
+                <li>
+                  <i className="fab fa-instagram"></i>
+                </li>
+                <li>
+                  <i className="fab fa-linkedin"></i>
+                </li>
+              </ul>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                height: "50px",
+                display: "grid",
+                placeItems: "center",
+              }}
+            >
+              <div className={classes.divider_hori}></div>
+            </div>
+
+            <div style={{width: '100%'}}>
+              <div className={classes.map_hd}>
+                <h4>Find Us On Map</h4>
+              </div>
+              <iframe
+                style={{ borderRadius: "20px", border: "none", width: "100%" }}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.2160590173385!2d68.3686810150135!3d25.39757738380348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIzJzUxLjMiTiA2OMKwMjInMTUuMSJF!5e0!3m2!1sen!2s!4v1592947625719!5m2!1sen!2s"
+                title="Map"
+                height="400"
+              ></iframe>
             </div>
           </Grid>
         </Grid>

@@ -1,5 +1,6 @@
 .gallery {
   background: url("/images/factory.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
 }
 
 .overlay {

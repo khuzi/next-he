@@ -1,0 +1,25 @@
+.footer {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  width: 150px;
+}
+
+.socialLinks ul {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.socialLinks ul li {
+  padding: 0 5px;
+}
+
+.socialLinks ul li i {
+  font-size: 1.5rem;
+}
+

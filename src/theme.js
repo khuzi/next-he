@@ -5,10 +5,10 @@ import { red } from "@material-ui/core/colors";
 let theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#556cd6",
+      main: "#00172d",
     },
     secondary: {
-      main: "#19857b",
+      main: "#dae1e7",
     },
     error: {
       main: red.A400,
@@ -18,12 +18,12 @@ let theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: '"Staatliches", cursive',
+    fontFamily: '"Playfair Display", serif',
     subtitle1: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: "'Roboto', sans-serif",
     },
     subtitle2: {
-      fontFamily: '"Lato", sans-serif',
+      fontFamily: "'Roboto', sans-serif",
     },
   },
 });

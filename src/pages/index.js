@@ -1,19 +1,23 @@
 import Head from "next/head";
 
+import Slider from "../Components/Slider/Slider";
+import About from "./about";
+import Products from "./products";
+import Contact from "./contact";
+
 import { Typography } from "@material-ui/core";
 
 export default function Home() {
   return (
-    <div>
+    <section>
       <Head>
-        <title>Create Next App</title>
+        <title>Hamza Enterprises | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Typography variant="h1">Hamza Enterprises</Typography>
-      <Typography variant="h2">Hamza Enterprises</Typography>
-      <Typography variant="h3">Hamza Enterprises</Typography>
-      <Typography variant="h4">Hamza Enterprises</Typography>
-      <h1>Hello</h1>
-    </div>
+      <Slider />
+      <About />
+      <Products />
+      <Contact />
+    </section>
   );
 }

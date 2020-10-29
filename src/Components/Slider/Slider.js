@@ -1,8 +1,8 @@
 import React from "react";
 
 import { carouselData } from "../../Data/index";
-import { Typography } from "@material-ui/core";
 
+import { Typography } from "@material-ui/core";
 import { Carousel } from "react-bootstrap";
 
 const Slider = () => {

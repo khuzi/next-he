@@ -19,7 +19,11 @@ const Contact = () => {
               {contactData.map((field) => (
                 <div key={field.label} className={classes.formgroup}>
                   <label>{field.label}</label>
-                  <input placeholder={field.placeholder} />
+                  <input
+                    placeholder={field.placeholder}
+                    required
+                    type={field.type}
+                  />
                 </div>
               ))}
               <div className={classes.formgroup}>
@@ -27,10 +31,11 @@ const Contact = () => {
                 <textarea
                   placeholder="Enter Message"
                   className={classes.txtArea}
+                  required
                 />
               </div>
               <div className={classes.btn}>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
               </div>
             </form>
           </Grid>
@@ -95,7 +100,7 @@ const Contact = () => {
               <div className={classes.divider_hori}></div>
             </div>
 
-            <div style={{width: '100%'}}>
+            <div style={{ width: "100%" }}>
               <div className={classes.map_hd}>
                 <h4>Find Us On Map</h4>
               </div>

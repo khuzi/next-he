@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -51,17 +50,50 @@ export default function ScrollableTabsButtonAuto() {
     <div>
       <AppBar position="static" color="default">
         <Tabs
+          style={{
+            background: "var(--primary-color)",
+          }}
           value={value}
           onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
+          indicatorColor="secondary"
+          textColor="secondary"
           variant="scrollable"
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          <Tab label="We Wash" {...a11yProps(0)} />
-          <Tab label="Hamza Chemiclas" {...a11yProps(1)} />
-          <Tab label="Distribution and Agencies" {...a11yProps(2)} />
+          <Tab
+            label="We Wash"
+            {...a11yProps(0)}
+            style={{
+              color: "#fff",
+              outline: "none",
+
+              fontSize: "15px",
+              letterSpacing: "2px",
+            }}
+          />
+          <Tab
+            label="Hamza Chemicals"
+            {...a11yProps(1)}
+            style={{
+              color: "#fff",
+              outline: "none",
+
+              fontSize: "15px",
+              letterSpacing: "2px",
+            }}
+          />
+          <Tab
+            label="Agencies"
+            {...a11yProps(2)}
+            style={{
+              color: "#fff",
+              outline: "none",
+
+              fontSize: "15px",
+              letterSpacing: "2px",
+            }}
+          />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>

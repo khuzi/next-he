@@ -6,6 +6,10 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
+import TabHeader from "./TabHeader/TabHeader";
+
+import { tabHeaderData } from "../../Data/index";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -48,10 +52,11 @@ export default function ScrollableTabsButtonAuto() {
 
   return (
     <div>
-      <AppBar position="static" color="default">
+      <AppBar position="static">
         <Tabs
           style={{
             background: "var(--primary-color)",
+            margin: "0 1rem",
           }}
           value={value}
           onChange={handleChange}
@@ -89,22 +94,17 @@ export default function ScrollableTabsButtonAuto() {
             style={{
               color: "#fff",
               outline: "none",
-
               fontSize: "15px",
               letterSpacing: "2px",
             }}
           />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
+      {tabHeaderData.map((tab, index) => (
+        <TabPanel value={value} index={index} style={{ padding: "1rem" }}>
+          <TabHeader logo={tab.src} title={tab.label} key={tab.label} />
+        </TabPanel>
+      ))}
     </div>
   );
 }

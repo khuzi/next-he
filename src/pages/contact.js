@@ -16,9 +16,10 @@ const Contact = () => {
         <Grid container justify="space-between">
           <Grid item xs={12} md={5} lg={6}>
             <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
               {contactData.map((field) => (
                 <div key={field.label} className={classes.formgroup}>
-                  <label>{field.label}</label>
+                  <label htmlFor={field.type}>{field.label}</label>
                   <input
                     placeholder={field.placeholder}
                     required

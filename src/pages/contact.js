@@ -82,7 +82,9 @@ const Contact = () => {
                   <i className="fab fa-facebook"></i>
                 </li>
                 <li>
-                  <i className="fab fa-whatsapp"></i>
+                  <a target="_blank" href="https://api.whatsapp.com/send?phone=+923122077030">
+                    <i className="fab fa-whatsapp"></i>
+                  </a>
                 </li>
                 <li>
                   <i className="fab fa-instagram"></i>

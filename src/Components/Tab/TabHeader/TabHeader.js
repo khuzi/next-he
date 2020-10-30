@@ -6,7 +6,7 @@ import classes from "./TabHeader.module.css";
 
 const TabHeader = ({ logo, title }) => {
   return (
-    <div>
+    <div className={classes.tabHeader}>
       <Grid container>
         <Grid item xs={12} md={4} lg={3}>
           <div className={classes.pro_logo}>
@@ -22,7 +22,10 @@ const TabHeader = ({ logo, title }) => {
           md={5}
           lg={5}
         >
-          <Typography style={{ paddingBottom: "1rem" }} variant="h4">
+          <Typography
+            style={{ paddingBottom: "1rem", fontWeight: "bold" }}
+            variant="h4"
+          >
             {title}
           </Typography>
           <Typography variant="subtitle1">

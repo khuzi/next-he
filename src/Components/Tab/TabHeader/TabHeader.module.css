@@ -3,3 +3,7 @@
   display: block;
   margin: 2rem auto;
 }
+
+.tabHeader {
+  padding: 1rem;
+}

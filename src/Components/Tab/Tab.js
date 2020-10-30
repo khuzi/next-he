@@ -101,8 +101,13 @@ export default function ScrollableTabsButtonAuto() {
         </Tabs>
       </AppBar>
       {tabHeaderData.map((tab, index) => (
-        <TabPanel value={value} index={index} style={{ padding: "1rem" }}>
-          <TabHeader logo={tab.src} title={tab.label} key={tab.label} />
+        <TabPanel
+          key={tab.label}
+          value={value}
+          index={index}
+          style={tab.padding && { padding: "2rem" }}
+        >
+          <TabHeader logo={tab.src} title={tab.label} />
         </TabPanel>
       ))}
     </div>

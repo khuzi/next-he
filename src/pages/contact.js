@@ -15,7 +15,7 @@ const Contact = () => {
         </div>
         <Grid container justify="space-between">
           <Grid item xs={12} md={5} lg={6}>
-            <form>
+            <form name="contact" method="POST" data-netlify="true">
               {contactData.map((field) => (
                 <div key={field.label} className={classes.formgroup}>
                   <label>{field.label}</label>
@@ -23,6 +23,7 @@ const Contact = () => {
                     placeholder={field.placeholder}
                     required
                     type={field.type}
+                    name={field.type}
                   />
                 </div>
               ))}
@@ -32,6 +33,7 @@ const Contact = () => {
                   placeholder="Enter Message"
                   className={classes.txtArea}
                   required
+                  name="message"
                 />
               </div>
               <div className={classes.btn}>

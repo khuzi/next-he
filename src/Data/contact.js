@@ -1,7 +1,6 @@
 export const contactData = [
   { label: "Name", placeholder: "Enter Name", type: "name" },
   { label: "Email", placeholder: "Enter Email", type: "email" },
-  { label: "Password", placeholder: "Enter Passowrd", type: "password" },
   { label: "Conatct", placeholder: "Enter Conatct No.", type: "number" },
 ];
 

@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { Skeleton } from "@material-ui/lab";
 
 const Navbar = dynamic(() => import("./Navbar/Navbar"), {
-  loading: () => <Skeleton variant="rect" width="100%" height="100px" />,
+  loading: () => <Skeleton variant="rect" width="100%" height="50px" />,
   ssr: false,
 });
 import Footer from "./Footer/Footer";

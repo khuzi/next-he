@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
-import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 
-import Navbar from "./Navbar/Navbar";
+import { Skeleton } from "@material-ui/lab";
+
+const Navbar = dynamic(() => import("./Navbar/Navbar"), {
+  loading: () => <Skeleton variant="rect" width="100%" height="100px" />,
+});
 import Footer from "./Footer/Footer";
 
 const Layout = ({ children }) => {
-  const router = useRouter();
-  useEffect(() => {
-    router.prefetch("/index");
-  }, []);
-
   return (
     <>
       <Navbar />

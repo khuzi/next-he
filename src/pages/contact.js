@@ -53,11 +53,20 @@ const Contact = () => {
                 {contactInfo.map((info) => (
                   <li key={info.i}>
                     <Grid container alignItems="center">
-                      <Grid item xs={2}>
+                      <Grid item xs={2} md={2} lg={1}>
                         <i className={info.i}></i>
                       </Grid>
                       <Grid item xs={10}>
-                        <Typography variant="h5">{info.txt}</Typography>
+                        <Typography
+                          style={{
+                            fontWeight: "600",
+                            letterSpacing: "1px",
+                            wordSpacing: "1px",
+                          }}
+                          variant="h6"
+                        >
+                          {info.txt}
+                        </Typography>
                       </Grid>
                       <br />
                       <br />
@@ -82,7 +91,10 @@ const Contact = () => {
                   <i className="fab fa-facebook"></i>
                 </li>
                 <li>
-                  <a target="_blank" href="https://api.whatsapp.com/send?phone=+923122077030">
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send?phone=+923122077030"
+                  >
                     <i className="fab fa-whatsapp"></i>
                   </a>
                 </li>

@@ -4,15 +4,17 @@ import { Grid, Typography } from "@material-ui/core";
 
 import classes from "./TabHeader.module.css";
 
-const TabHeader = ({ logo, title }) => {
+const TabHeader = ({ logo, title, intro }) => {
   return (
     <div className={classes.tabHeader}>
       <Grid container>
-        <Grid item xs={12} md={4} lg={3}>
-          <div className={classes.pro_logo}>
-            <img src={logo} />
-          </div>
-        </Grid>
+        {logo ? (
+          <Grid item xs={12} md={4} lg={3}>
+            <div className={classes.pro_logo}>
+              <img src={logo} />
+            </div>
+          </Grid>
+        ) : null}
         <Grid
           container
           direction="column"
@@ -28,12 +30,7 @@ const TabHeader = ({ logo, title }) => {
           >
             {title}
           </Typography>
-          <Typography variant="subtitle1">
-            Sulphuric Acid is a strong dibasic acid. in addition, it is also a
-            strong oxidizing and dehydrating agent. It is one of the most widely
-            employed chemicals and enters into many industries, though
-            infrequently appearing in the finished material.
-          </Typography>
+          {intro && <Typography variant="subtitle1">{intro}</Typography>}
         </Grid>
       </Grid>
     </div>

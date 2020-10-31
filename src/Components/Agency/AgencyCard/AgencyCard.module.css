@@ -1,0 +1,28 @@
+.root {
+  width: 90%;
+  margin: 1rem auto;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1) !important;
+  cursor: pointer;
+}
+.media {
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.usage {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.3rem 0;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.list ul li {
+  padding: 0.5rem 0;
+  transition: all 0.5s ease-in;
+}
+
+.list ul li:hover {
+  padding-left: 1rem;
+}

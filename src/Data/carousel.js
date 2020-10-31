@@ -1,7 +1,7 @@
 export const carouselData = [
   {
     src: "/images/img_1.jpg",
-    txt1: "CHEMICAL MANUFACTURER FOR PAST 20 YEARS",
+    txt1: "CHEMICAL MANUFACTURER FOR PAST 50 YEARS",
   },
   {
     src: "/images/img_2.jpg",

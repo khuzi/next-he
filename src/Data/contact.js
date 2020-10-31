@@ -5,7 +5,10 @@ export const contactData = [
 ];
 
 export const contactInfo = [
-  { i: "fas fa-map-marker-alt", txt: "Abc789, hjhy,mjl" },
-  { i: "fas fa-envelope", txt: "hamzaenterprises@gmail.com" },
+  {
+    i: "fas fa-map-marker-alt",
+    txt: "Office # A/1243, Near T.M.K Transport, Miyani Road, Hyderabad",
+  },
+  { i: "fas fa-envelope", txt: "hamzaenterprises.official@gmail.com" },
   { i: "fas fa-phone-alt", txt: "0312-20117030" },
 ];

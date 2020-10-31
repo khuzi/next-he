@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
-import TabHeader from "./TabHeader/TabHeader";
-
-import { tabHeaderData } from "../../Data/index";
+import WeWash from "../WeWash/WeWash";
+import Agency from "../Agency/Agency";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,7 +67,7 @@ export default function ScrollableTabsButtonAuto() {
           aria-label="scrollable auto tabs example"
         >
           <Tab
-            label="We Wash"
+            label="Agencies"
             {...a11yProps(0)}
             style={{
               color: "#fff",
@@ -89,7 +89,7 @@ export default function ScrollableTabsButtonAuto() {
             }}
           />
           <Tab
-            label="Agencies"
+            label="We Wash"
             {...a11yProps(2)}
             style={{
               color: "#fff",
@@ -100,16 +100,15 @@ export default function ScrollableTabsButtonAuto() {
           />
         </Tabs>
       </AppBar>
-      {tabHeaderData.map((tab, index) => (
-        <TabPanel
-          key={tab.label}
-          value={value}
-          index={index}
-          style={tab.padding && { padding: "2rem" }}
-        >
-          <TabHeader logo={tab.src} title={tab.label} />
-        </TabPanel>
-      ))}
+      <TabPanel value={value} index={0}>
+        <Agency />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        Item Two
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <WeWash />
+      </TabPanel>
     </div>
   );
 }

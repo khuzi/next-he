@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 
 const Layout = ({ children }) => {
+  const router = useRouter();
+  useEffect(() => {
+    router.prefetch("/index");
+  }, []);
+
   return (
     <>
       <Navbar />

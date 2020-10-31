@@ -5,7 +5,7 @@ import About from "./about";
 import Products from "./products";
 import Contact from "./contact";
 
-import { Typography } from "@material-ui/core";
+
 
 export default function Home() {
   return (

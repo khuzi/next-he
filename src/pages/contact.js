@@ -13,7 +13,7 @@ const Contact = () => {
         <div className="heading">
           <Typography variant="h2">Contact Us</Typography>
         </div>
-        <Grid container justify="space-between">
+        <Grid container justify="space-between" className={classes.form}>
           <Grid item xs={12} md={5} lg={6}>
             <form name="contact" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />

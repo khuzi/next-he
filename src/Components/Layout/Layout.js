@@ -1,12 +1,6 @@
-import React, { useEffect } from "react";
-import dynamic from "next/dynamic";
+import React from "react";
 
-import { Skeleton } from "@material-ui/lab";
-
-const Navbar = dynamic(() => import("./Navbar/Navbar"), {
-  loading: () => <Skeleton variant="rect" width="100%" height="50px" />,
-  ssr: false,
-});
+import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 
 const Layout = ({ children }) => {

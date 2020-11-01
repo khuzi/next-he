@@ -1,14 +1,12 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
-// import Slider from "../Components/Slider/Slider";
-
-// import About from "./about";
-// import Products from "./products";
-// import Contact from "./contact";
+import { Skeleton } from "@material-ui/lab";
 
 const Slider = dynamic(() => import("../Components/Slider/Slider"), {
-  loading: () => <p>Loading..!</p>,
+  loading: () => (
+    <Skeleton animation="wave" variant="rect" width="100%" height="100vh" />
+  ),
   ssr: false,
 });
 

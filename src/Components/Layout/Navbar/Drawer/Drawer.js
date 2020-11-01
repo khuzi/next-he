@@ -60,7 +60,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <div style={{ width: "120px", margin: "2rem auto 1rem" }}>
-        <img src="/images/HE-Logo.jpg" />
+        <img src="/images/HE-Logo.png" />
       </div>
       <Divider />
       <List>

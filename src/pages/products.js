@@ -1,8 +1,14 @@
 import React from "react";
+import dynamic from "next/dynamic";
+
+import Spinner from '../Components/Spinner/Spinner';
+
+const Tabs = dynamic(() => import("../Components/Tab/Tab"), {
+  loading: () => <Spinner />,
+  ssr: false,
+});
 
 import { Typography } from "@material-ui/core";
-
-import Tabs from "../Components/Tab/Tab";
 
 import classes from "../styles/products.module.css";
 

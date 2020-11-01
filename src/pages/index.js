@@ -1,29 +1,16 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
-import { Skeleton } from "@material-ui/lab";
+import Spinner from "../Components/Spinner/Spinner";
 
 const Slider = dynamic(() => import("../Components/Slider/Slider"), {
-  loading: () => (
-    <Skeleton animation="wave" variant="rect" width="100%" height="100vh" />
-  ),
+  loading: () => <Spinner />,
   ssr: false,
 });
 
-const About = dynamic(() => import("./about"), {
-  loading: () => <p>Loading..!</p>,
-  ssr: false,
-});
-
-const Products = dynamic(() => import("./products"), {
-  loading: () => <p>Loading..!</p>,
-  ssr: false,
-});
-
-const Contact = dynamic(() => import("./contact"), {
-  loading: () => <p>Loading..!</p>,
-  ssr: false,
-});
+import About from "./about";
+import Products from "./products";
+import Contact from "./contact";
 
 export default function Home() {
   return (

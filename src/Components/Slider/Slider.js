@@ -9,7 +9,7 @@ const Slider = () => {
   return (
     <Carousel>
       {carouselData.map((slide, index) => (
-        <Carousel.Item interval={5000} key={index}>
+        <Carousel.Item interval={2000} key={index}>
           <div
             style={{
               height: "90vh",

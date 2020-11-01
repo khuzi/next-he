@@ -28,7 +28,7 @@ const GallerySlider = () => {
               <img src="/images/4.jpg" />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <img src="/images/5.png" />
+              <img src="/images/5.jpg" />
             </Grid>
           </Grid>
         </div>

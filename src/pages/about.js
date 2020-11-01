@@ -1,6 +1,15 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-import GallerySlider from "../Components/GsllerySlider/GallerySlider";
+import Spinner from "../Components/Spinner/Spinner";
+
+const GallerySlider = dynamic(
+  () => import("../Components/GsllerySlider/GallerySlider"),
+  {
+    loading: () => <Spinner />,
+    ssr: false,
+  }
+);
 
 import { Grid, Typography } from "@material-ui/core";
 

@@ -8,9 +8,17 @@ const Slider = dynamic(() => import("../Components/Slider/Slider"), {
   ssr: false,
 });
 
-import About from "./about";
-import Products from "./products";
-import Contact from "./contact";
+const About = dynamic(() => import("./about"), {
+  ssr: false,
+});
+
+const Products = dynamic(() => import("./products"), {
+  ssr: false,
+});
+
+const Contact = dynamic(() => import("./contact"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

@@ -17,10 +17,10 @@ const GallerySlider = () => {
         <div className={classes.overlay}>
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/1.jpg" unsized loading="eager" />
+              <Image src="https://assets.vercel.com/image/upload/v1538361091/repositories/next-js/next-js.png" unsized loading="eager" />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/2.jpg" unsized />
+              <Image src="https://assets.vercel.com/image/upload/v1538361091/repositories/next-js/next-js.png" unsized />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <Image src="/3.jpg" unsized />

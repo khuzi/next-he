@@ -17,19 +17,19 @@ const GallerySlider = () => {
         <div className={classes.overlay}>
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/1.jpg" width="350px" height="250px" />
+              <Image src="/images/1.jpg" unsized loading="eager"/>
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/2.jpg" width="350px" height="250px" />
+              <Image src="/images/2.jpg" unsized />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/3.jpg" width="350px" height="250px" />
+              <Image src="/images/3.jpg" unsized />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/4.jpg" width="350px" height="250px" />
+              <Image src="/images/4.jpg" unsized />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/5.jpg" width="350px" height="250px" />
+              <Image src="/images/5.jpg" unsized />
             </Grid>
           </Grid>
         </div>

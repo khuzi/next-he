@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import { Typography, Grid } from "@material-ui/core";
 
@@ -17,19 +16,19 @@ const GallerySlider = () => {
         <div className={classes.overlay}>
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/1.jpg" unsized priority />
+              <img src="/images/1.jpg" />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/2.jpg" unsized priority />
+              <img src="/images/2.jpg" />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/3.jpg" unsized priority />
+              <img src="/images/3.jpg" />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/4.jpg" unsized priority />
+              <img src="/images/4.jpg" />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <Image src="/images/5.png" unsized priority />
+              <img src="/images/5.png" />
             </Grid>
           </Grid>
         </div>

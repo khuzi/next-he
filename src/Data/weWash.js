@@ -22,15 +22,18 @@ export const olympiaProducts = [
       "Chemicals",
       "Papers",
     ],
+    alt: "soda light",
   },
   {
     title: "Soda Ash Dense",
     media: "/images/sodaDense.jpg",
     usage: ["Glass", "Detergents", "Chemicals"],
+    alt: "soda dense",
   },
   {
     title: "Refined Sodium Bicarbonate",
     media: "/images/bicarbonate.jpg",
     usage: ["Baking", "Beverages", "Tannery", "Fire Extinguishers"],
+    alt: "sodium carbonate",
   },
 ];

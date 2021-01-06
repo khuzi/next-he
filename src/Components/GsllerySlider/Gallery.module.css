@@ -17,3 +17,13 @@
   margin: auto;
   display: block;
 }
+
+.gal_img {
+  margin: 0 1rem !important;
+}
+
+@media (max-width: 599px) {
+  .gal_img {
+    margin-left: 0 !important;
+  }
+}

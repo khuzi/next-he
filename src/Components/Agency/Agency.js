@@ -18,6 +18,7 @@ const Agency = () => {
             title={product.title}
             media={product.media}
             list={product.usage}
+            alt={product.alt}
           />
         ))}
       </Grid>

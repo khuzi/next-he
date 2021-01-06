@@ -9,7 +9,7 @@ import { Grid } from "@material-ui/core";
 
 import classes from "./AgencyCard.module.css";
 
-export default function RecipeReviewCard({ title, media, list }) {
+export default function RecipeReviewCard({ title, media, list, alt }) {
   return (
     <Grid item xs={12} sm={6} md={4} lg={4}>
       <Card className={classes.root}>
@@ -20,11 +20,7 @@ export default function RecipeReviewCard({ title, media, list }) {
             </Typography>
           }
         />
-        <CardMedia
-          className={classes.media}
-          image={media}
-          title="Paella dish"
-        />
+        <CardMedia className={classes.media} image={media} title={alt} />
         <CardContent style={{ background: "#f4f4f4" }}>
           <div className={classes.usage}>
             <Typography variant="h5" component="p" align="center">

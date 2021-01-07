@@ -1,5 +1,7 @@
 import React from "react";
 
+import emailjs from "emailjs-com";
+
 import { contactData, contactInfo } from "../Data/index";
 
 import { Typography, Grid, Hidden, Divider } from "@material-ui/core";
@@ -7,6 +9,26 @@ import { Typography, Grid, Hidden, Divider } from "@material-ui/core";
 import classes from "../styles/contact.module.css";
 
 const Contact = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_b2jzyut",
+        "template_bkiru8l",
+        e.target,
+        "user_0X2i4r8ymYNQn7wYLOXR3"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log("Email.js Error = ", error.text, "Email.js Error = ");
+        }
+      );
+    e.target.reset();
+  }
+
   return (
     <section className={classes.contact}>
       <div className="mainWarper">
@@ -15,8 +37,8 @@ const Contact = () => {
         </div>
         <Grid container justify="space-between" className={classes.form}>
           <Grid item xs={12} md={5} lg={6}>
-            <form name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="contact_number" />
+            <form onSubmit={sendEmail}>
               {contactData.map((field) => (
                 <div key={field.label} className={classes.formgroup}>
                   <label htmlFor={field.type}>{field.label}</label>
@@ -24,7 +46,7 @@ const Contact = () => {
                     placeholder={field.placeholder}
                     required
                     type={field.type}
-                    name={field.type}
+                    name={field.name}
                   />
                 </div>
               ))}
@@ -38,7 +60,7 @@ const Contact = () => {
                 />
               </div>
               <div className={classes.btn}>
-                <button type="submit">Submit</button>
+                <input type="submit" value="Send" />
               </div>
             </form>
           </Grid>
@@ -117,7 +139,7 @@ const Contact = () => {
               <div className={classes.divider_hori}></div>
             </div>
 
-            <div style={{ width: "100%" }}>
+            <div style={{ width: "100%", marginBottom: "1rem" }}>
               <div className={classes.map_hd}>
                 <h4>Find Us On Map</h4>
               </div>
@@ -125,7 +147,7 @@ const Contact = () => {
                 style={{ borderRadius: "20px", border: "none", width: "100%" }}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.2160590173385!2d68.3686810150135!3d25.39757738380348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIzJzUxLjMiTiA2OMKwMjInMTUuMSJF!5e0!3m2!1sen!2s!4v1592947625719!5m2!1sen!2s"
                 title="Map"
-                height="400"
+                height="280"
               ></iframe>
             </div>
           </Grid>

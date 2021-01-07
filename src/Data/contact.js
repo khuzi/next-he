@@ -1,7 +1,18 @@
 export const contactData = [
-  { label: "Name", placeholder: "Enter Name", type: "name" },
-  { label: "Email", placeholder: "Enter Email", type: "email" },
-  { label: "Conatct", placeholder: "Enter Conatct No.", type: "number" },
+  { label: "Name", placeholder: "Enter Name", type: "text", name: "name" },
+  { label: "Email", placeholder: "Enter Email", type: "email", name: "email" },
+  {
+    label: "Subject",
+    placeholder: "Enter Subject",
+    type: "text",
+    name: "subject",
+  },
+  {
+    label: "Conatct",
+    placeholder: "Enter Conatct No.",
+    type: "number",
+    name: "contact",
+  },
 ];
 
 export const contactInfo = [

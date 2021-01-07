@@ -19,6 +19,7 @@ const Slider = () => {
               layout="fill"
               loading="eager"
               src={slide.src}
+              quality={25}
             />
             <div className={classes.overlay}>
               <div style={{ color: "#fff", maxWidth: "75%" }}>

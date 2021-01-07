@@ -65,7 +65,7 @@ export default function TemporaryDrawer() {
       <Divider />
       <List>
         {navBarData.map((text, index) => (
-          <ListItem key={index} style={{textAlign: 'center'}}> 
+          <ListItem key={index} style={{ textAlign: "center" }}>
             <ListItemText
               primary={
                 <Link href={text.href}>
@@ -96,6 +96,9 @@ export default function TemporaryDrawer() {
             edge="start"
             color="inherit"
             aria-label="menu"
+            style={{
+              outline: "none",
+            }}
           >
             <MenuIcon className={classes.menuIcon} />
           </IconButton>

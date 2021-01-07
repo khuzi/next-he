@@ -14,7 +14,7 @@ export const weWashProducts = [
 export const olympiaProducts = [
   {
     title: "Soda Ash Light",
-    media: "/images/sodalight.jpg",
+    media: "/images/sodaLight.jpg",
     usage: [
       "Sodium Silicate",
       "Soaps & Detergents",

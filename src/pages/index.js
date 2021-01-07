@@ -1,24 +1,12 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
 
-import Spinner from "../Components/Spinner/Spinner";
+import Slider from "../Components/Slider/Slider";
 
-const Slider = dynamic(() => import("../Components/Slider/Slider"), {
-  loading: () => <Spinner />,
-  ssr: false,
-});
+import About from "./about";
 
-const About = dynamic(() => import("./about"), {
-  ssr: false,
-});
+import Products from "./products";
 
-const Products = dynamic(() => import("./products"), {
-  ssr: false,
-});
-
-const Contact = dynamic(() => import("./contact"), {
-  ssr: false,
-});
+import Contact from "./contact";
 
 export default function Home() {
   return (

@@ -4,12 +4,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../theme";
 import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
 
 import Spinner from "../Components/Spinner/Spinner";
-const Layout = dynamic(() => import("../Components/Layout/Layout"), {
-  ssr: false,
-});
+import Layout from "../Components/Layout/Layout";
 
 import "../styles/globals.css";
 

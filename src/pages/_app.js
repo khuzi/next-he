@@ -10,6 +10,14 @@ import Layout from "../Components/Layout/Layout";
 
 import "../styles/globals.css";
 
+const Redirect = ({ to }) => {
+  const router = useRouter();
+  useEffect(() => {
+    router.push(to);
+  }, [to]);
+  return null;
+};
+
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -29,6 +37,12 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeStart", () => handleRouteComplete);
     };
   }, []);
+
+  console.log("Router = ", router);
+
+  if (router.pathname === "/_error") {
+    return <Redirect to="/" />;
+  }
 
   return (
     <ThemeProvider theme={theme}>

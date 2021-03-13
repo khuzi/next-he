@@ -17,9 +17,9 @@ const Slider = () => {
             <Image
               objectFit="cover"
               layout="fill"
-              loading="eager"
+              loading="lazy"
               src={slide.src}
-              quality={25}
+              quality={10}
             />
             <div className={classes.overlay}>
               <div style={{ color: "#fff", maxWidth: "75%" }}>

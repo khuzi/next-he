@@ -37,7 +37,8 @@ const GallerySlider = () => {
                   width={600}
                   height={400}
                   objectFit="fill"
-                  quality={25}
+                  quality={10}
+                  loading="lazy"
                 />
               </Grid>
             ))}
